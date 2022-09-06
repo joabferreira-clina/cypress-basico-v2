@@ -1,6 +1,6 @@
 # Testes automatizados com Cypress - BETA
 
-Os testes se encontram na pasta integration, no arquivo CAC-TAT.spec.js
+- [TESTES BETA](https://github.com/joabferreira-clina/cypress-basico-v2/blob/main/cypress/integration/CAC-TAT.spec.js)
 
 ## Deploy
 
