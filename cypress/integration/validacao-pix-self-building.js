@@ -3,14 +3,14 @@
 /// <reference types="Cypress" />
 
 describe("Suíte de testes area pix Anfitrião", function () {
-  //Exercício
-  // beforeEach(() => {
-  //   cy.visit("https://maleta.rocks/host")
-  // })
 
-
-  it("Barrar cadastro CPF inválido chave PIX", { keystrokeDelay: 0 }, () => {
+  beforeEach(() => {
     cy.visit("https://maleta.rocks/host")
+  })
+
+
+  it("Barrar cadastro CPF inválido chave PIX", { keystrokeDelay: 30 }, () => {
+    // cy.visit("https://maleta.rocks/host")
 
     cy.get('.form-control').type('joab.ferreira@clina.care')
     cy.get('.btn').click()
@@ -30,14 +30,14 @@ describe("Suíte de testes area pix Anfitrião", function () {
     cy.get(".toast-error").should("be.visible")
   })
 
-  it("Barrar cadastro Email inválido chave PIX", { keystrokeDelay: 0 }, () => {
+  it("Barrar cadastro Email inválido chave PIX", { keystrokeDelay: 30 }, () => {
     //login
-    // cy.get('.form-control').type('joab.ferreira@clina.care')
-    // cy.get('.btn').click()
-    // cy.get('clina-show-hide-input > div > .form-control').type('Qwe123.,.')
-    // cy.get('.btn').click()
-    // cy.wait(3000)
-    // cy.get('.justify-content-between > .ng-star-inserted').click()
+    cy.get('.form-control').type('joab.ferreira@clina.care')
+    cy.get('.btn').click()
+    cy.get('clina-show-hide-input > div > .form-control').type('Qwe123.,.')
+    cy.get('.btn').click()
+    cy.wait(3000)
+    cy.get('.justify-content-between > .ng-star-inserted').click()
     cy.get('.sub-item').click()
     cy.get('.btn').click()
     cy.wait(1500)
@@ -52,13 +52,14 @@ describe("Suíte de testes area pix Anfitrião", function () {
     cy.get(".toast-error").should("be.visible")
   })
 
-  it("Barrar cadastro CNPJ inválido chave PIX", { keystrokeDelay: 0 }, () => {
-    // cy.get('.form-control').type('joab.ferreira@clina.care')
-    // cy.get('.btn').click()
-    // cy.get('clina-show-hide-input > div > .form-control').type('Qwe123.,.')
-    // cy.get('.btn').click()
-    // // cy.wait(3000)
-    // cy.get('.justify-content-between > .ng-star-inserted').click()
+  it("Barrar cadastro CNPJ inválido chave PIX", { keystrokeDelay: 30 }, () => {
+    //login
+    cy.get('.form-control').type('joab.ferreira@clina.care')
+    cy.get('.btn').click()
+    cy.get('clina-show-hide-input > div > .form-control').type('Qwe123.,.')
+    cy.get('.btn').click()
+    // cy.wait(3000)
+    cy.get('.justify-content-between > .ng-star-inserted').click()
     cy.get('.sub-item').click()
     cy.get('.btn').click()
     cy.wait(1500)
@@ -74,13 +75,13 @@ describe("Suíte de testes area pix Anfitrião", function () {
 
   })
 
-  it("Barrar cadastro Celular inválido chave PIX", { keystrokeDelay: 0 }, () => {
-    // cy.get('.form-control').type('joab.ferreira@clina.care')
-    // cy.get('.btn').click()
-    // cy.get('clina-show-hide-input > div > .form-control').type('Qwe123.,.')
-    // cy.get('.btn').click()
-    // // cy.wait(3000)
-    // cy.get('.justify-content-between > .ng-star-inserted').click()
+  it("Barrar cadastro Celular inválido chave PIX", { keystrokeDelay: 30 }, () => {
+    cy.get('.form-control').type('joab.ferreira@clina.care')
+    cy.get('.btn').click()
+    cy.get('clina-show-hide-input > div > .form-control').type('Qwe123.,.')
+    cy.get('.btn').click()
+    // cy.wait(3000)
+    cy.get('.justify-content-between > .ng-star-inserted').click()
     cy.get('.sub-item').click()
     cy.get('.btn').click()
     cy.wait(1500)
@@ -95,13 +96,13 @@ describe("Suíte de testes area pix Anfitrião", function () {
     cy.get('#pix-key').clear()
   })
 
-  it("Barrar cadastro Celular com letras", { keystrokeDelay: 0 }, () => {
-    // cy.get('.form-control').type('joab.ferreira@clina.care')
-    // cy.get('.btn').click()
-    // cy.get('clina-show-hide-input > div > .form-control').type('Qwe123.,.')
-    // cy.get('.btn').click()
-    // // cy.wait(3000)
-    // cy.get('.justify-content-between > .ng-star-inserted').click()
+  it("Barrar cadastro Celular com letras", { keystrokeDelay: 30 }, () => {
+    cy.get('.form-control').type('joab.ferreira@clina.care')
+    cy.get('.btn').click()
+    cy.get('clina-show-hide-input > div > .form-control').type('Qwe123.,.')
+    cy.get('.btn').click()
+    // cy.wait(3000)
+    cy.get('.justify-content-between > .ng-star-inserted').click()
     cy.get('.sub-item').click()
     cy.get('.btn').click()
     cy.wait(1500)
@@ -117,13 +118,13 @@ describe("Suíte de testes area pix Anfitrião", function () {
 
 
 
-  it("Cadastro Email válido chave PIX", { keystrokeDelay: 0 }, () => {
-    // cy.get('.form-control').type('joab.ferreira@clina.care')
-    // cy.get('.btn').click()
-    // cy.get('clina-show-hide-input > div > .form-control').type('Qwe123.,.')
-    // cy.get('.btn').click()
-    // // cy.wait(3000)
-    // cy.get('.justify-content-between > .ng-star-inserted').click()
+  it("Cadastro Email válido chave PIX", { keystrokeDelay: 30 }, () => {
+    cy.get('.form-control').type('joab.ferreira@clina.care')
+    cy.get('.btn').click()
+    cy.get('clina-show-hide-input > div > .form-control').type('Qwe123.,.')
+    cy.get('.btn').click()
+    // cy.wait(3000)
+    cy.get('.justify-content-between > .ng-star-inserted').click()
     cy.get('.sub-item').click()
     cy.get('.btn').click()
     cy.wait(1500)
@@ -145,11 +146,11 @@ describe("Suíte de testes area pix Anfitrião", function () {
   })
 
 
-  it("Cadastro CPF válido chave PIX", { keystrokeDelay: 0 }, () => {
-    // cy.get('.form-control').type('joab.ferreira@clina.care')
-    // cy.get('.btn').click()
-    // cy.get('clina-show-hide-input > div > .form-control').type('Qwe123.,.')
-    // cy.get('.btn').click()
+  it("Cadastro CPF válido chave PIX", { keystrokeDelay: 30 }, () => {
+    cy.get('.form-control').type('joab.ferreira@clina.care')
+    cy.get('.btn').click()
+    cy.get('clina-show-hide-input > div > .form-control').type('Qwe123.,.')
+    cy.get('.btn').click()
     // // cy.wait(3000)
     cy.get('.justify-content-between > .ng-star-inserted').click()
     cy.get('.sub-item').click()
@@ -174,7 +175,7 @@ describe("Suíte de testes area pix Anfitrião", function () {
   })
 
 
-  it("Cadastro CNPJ válido chave PIX", { keystrokeDelay: 0 }, () => {
+  it("Cadastro CNPJ válido chave PIX", { keystrokeDelay: 30 }, () => {
     cy.visit("https://maleta.rocks/host")
     cy.get('.form-control').type('joab.ferreira@clina.care')
     cy.get('.btn').click()
