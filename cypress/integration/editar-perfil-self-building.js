@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe("Suíte de testes area pix Anfitrião", function () {
+describe("Testes perfil SelfBuilding", function () {
 
   beforeEach(() => {
     cy.visit("https://maleta.rocks/host/auth")

@@ -2,7 +2,7 @@
 
 /// <reference types="Cypress" />
 
-describe("Suíte de testes area pix Anfitrião", function () {
+describe("Testes sessão PIX SelfBuilding", function () {
 
   beforeEach(() => {
     cy.visit("https://maleta.rocks/host")
