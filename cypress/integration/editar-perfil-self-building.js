@@ -40,10 +40,11 @@ describe("Testes perfil SelfBuilding", function () {
     cy.get(':nth-child(2) > .col-md-7 > .form-group > .form-control').clear()
     cy.get(':nth-child(2) > .col-md-7 > .form-group > .form-control').type('11111111111')
     cy.get('.mt-3 > .btn').click()
+    cy.wait(1500)
     cy.get(".toast-message").should("be.visible")
   });
 
-  it.only('Barrar CEP inválido', { keystrokeDelay: 40 }, () => {
+  it('Barrar CEP inválido', { keystrokeDelay: 40 }, () => {
     cy.get('.form-control').type('clinatestess@mailinator.com')
     cy.get('.btn > .ng-star-inserted').click()
     cy.wait(500)

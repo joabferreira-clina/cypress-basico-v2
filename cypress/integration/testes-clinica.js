@@ -29,7 +29,7 @@ describe("Testes clínicas SelfBuilding", function () {
     cy.get('.btn').click()
   });
 
-  it.only('Editar clinica', { keystrokeDelay: 40 }, () => {
+  it('Barrar CEP invalido', { keystrokeDelay: 40 }, () => {
     cy.get('.form-control').type('clinatestess@mailinator.com')
     cy.get('.btn > .ng-star-inserted').click()
     cy.wait(500)
